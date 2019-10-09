@@ -1,0 +1,37 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a, b;
+    int l_dzielnikow;
+    unsigned int i;
+    cout<<"podaj dolna granice ptrzedzialu"<<endl;
+    cin>>a;
+    cout<<"podaj gorna granice przedzialu"<<endl;
+    cin>>b;
+
+    for(int j=a; j<=b; j++)
+    {
+        l_dzielnikow=0;
+        for(unsigned int i=1; i<=j/2; i++)
+        {
+            if(j%i==0)
+            {
+                l_dzielnikow++;
+
+            }
+        }
+        if(l_dzielnikow==1)
+        {
+            cout<<j<<endl;
+        }
+
+    }
+
+
+
+
+    return 0;
+}
