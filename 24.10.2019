@@ -1,0 +1,61 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std;
+
+int main()
+{
+    /*string tekst;
+    bool jest=true;
+    cout<<"podaj tekst"<<endl;
+    getline(cin, tekst);
+    for(int i=0; i<=tekst.size()/2; i++)
+    {
+        if(tekst[i]!=tekst[tekst.size()-1-i])
+        {
+            jest=false;
+        }
+    }
+    if(jest)
+    {
+        cout<<"to palindrom"<<endl;
+    }
+    else
+    {
+        cout<<"to nie jest palindrom"<<endl;
+    }*/
+
+    srand(time(NULL));
+
+    int tab[4][3];
+    int suma_w[4]={0};
+    int suma_k[3]={0};
+
+    for(int i=0; i<4; i++)
+    {
+        for( int j=0; j<3; j++)
+        {
+            tab[i][j]=(rand()%10)+1;
+
+            suma_w[i]+=tab[i][j];
+            suma_k[j]+=tab[i][j];
+
+        }
+    }
+       for(int i=0; i<4; i++)
+    {
+        for( int j=0; j<3; j++)
+        {
+            cout<<tab[i][j]<<"\t";
+        }
+        cout<<endl;
+    }
+    for(int i=0; i<4; i++)
+    {
+        cout<<suma_w[i]<<"\t";
+    }
+    for(int i=0; i<3; i++)
+    {
+        cout<<suma_k[i]<<"\t";
+    }
