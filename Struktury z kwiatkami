@@ -87,7 +87,7 @@ int main()
     {
         suma+=wyniki[i];
     }
-    cout<<"Skutecznosc algorytmu wynosi: "<<1.0*suma/100<<endl;
+    cout<<"Skutecznosc algorytmu wynosi: "<<1.0*suma/75<<endl;
 
     return 0;
 }
